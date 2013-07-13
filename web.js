@@ -7,10 +7,10 @@ app.get('/', function(request, response) {
   fs.readFile("index.html", function (err,data) {
     if (err) {
       response.send("Houston, we have a problem.");
-      console.log("Failed to read index.htmlo");
+      console.log("Failed to read index.html");
       return console.log(err);
     }
-    response.send(data);
+    response.send(data.toString());
   });
 });
 
